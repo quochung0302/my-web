@@ -1,0 +1,16 @@
+.article {
+    overflow: hidden;
+    .article-image {
+        float: left;
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    }
+    .article-content {
+        margin-left: 210px;
+        margin-top: 15px;
+        text-align: left;
+        font-size: 20px;
+    }
+}

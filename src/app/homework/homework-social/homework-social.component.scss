@@ -1,0 +1,15 @@
+.social {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: rgba(54, 36, 36, 0.067);
+    margin: 20px;
+    display: inline-block;
+    a {
+        color: white;
+        font-size: 14px;
+        letter-spacing: 5px;
+        line-height: 200px;
+    }
+}

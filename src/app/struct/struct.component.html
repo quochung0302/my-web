@@ -1,0 +1,26 @@
+<!-- <p *ngIf="isShow">Lorem ipsum dolor sit amet.</p>
+<button (click)="isShow=!isShow"></button>
+<ul>
+  <li *ngFor="let sub of arrSub">{{sub}}</li>
+</ul>
+<br> <br> -->
+<div *ngIf="show">
+  <input type="text" placeholder="English" [(ngModel)]="eng"><br> <br>
+  <input type="text" placeholder="Vietnamese" [(ngModel)]="vnese"><br> <br>
+</div>
+<button (click)="addWord()">ADD</button>
+<br><br>
+<select [(ngModel)]="status">
+  <option value="All">All</option>
+  <option value="Yes">Yes</option>
+  <option value="No">No</option>
+</select>
+
+<div *ngFor="let word of arrWords">
+  <div  *ngIf=" status=='All' || (status =='Yes' && word.memorized) || (status == 'No' && !word.memorized) "  class="box">
+    <h3 [ngStyle]="{color: word.memorized ? 'green' : 'red'}">{{word.en}}</h3>
+    <p>{{word.vn}}</p>
+    <button (click)="removeWord(word.id)">Remove</button>
+  </div>
+ 
+</div>
