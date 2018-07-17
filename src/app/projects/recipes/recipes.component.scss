@@ -1,0 +1,28 @@
+@font-face {
+    font-family: font1;
+    src: url(../../../assets/fonts/texgyreadventor-regular.otf)
+}
+
+@keyframes slide-hi {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    margin-top: 100px;
+    text-align: center;
+    height: 400px;
+    h1 {
+        color: white;
+        font-family: font1;
+        animation: slide-hi 1s ease;
+        font-size: 70px;
+        letter-spacing: 10px;
+    }
+}

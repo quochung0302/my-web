@@ -1,0 +1,88 @@
+<div class="table">
+    <h1>BẢNG ĐIỂM</h1>
+
+    <ul class="list-group">
+        <li class="list-group-item header">
+            <div class="row">
+                <div class="col-xs-1">
+                    <span>STT</span>
+                </div>
+                <div class="col-xs-4">
+                    <span>Họ Tên</span>
+                </div>
+                <div class="col-xs-2 ">
+                    <span>Lớp</span>
+                </div>
+                <div class="col-xs-1 ">
+                    <span (click)="sortMath() " style="cursor: pointer; ">Toán</span>
+                </div>
+                <div class="col-xs-1 ">
+                    <span (click)="sortPhysical() " style="cursor: pointer; ">Lý</span>
+                </div>
+                <div class=" col-xs-1 ">
+                    <span (click)="sortChemistry() " style="cursor: pointer; ">Hóa</span>
+                </div>
+                <div class="col-xs-2 ">
+                    <span (click)="sortTb() " style="cursor: pointer; ">Trung Bình</span>
+                </div>
+            </div>
+        </li>
+        <li *ngFor="let student of students; let i=index " class="list-group-item item" [class.active]="i=== id" (click)="selectStudent( i)">
+            <div class="row ">
+                <div class="col-xs-1 ">
+                    <span>{{i+1}}</span>
+                </div>
+                <div class="col-xs-4 ">
+                    <span>{{student.name}}</span>
+                </div>
+                <div class="col-xs-2 ">
+                    <span>{{student.aclass}}</span>
+                </div>
+                <div class="col-xs-1 ">
+                    <span>{{student.math}}</span>
+                </div>
+                <div class="col-xs-1 ">
+                    <span>{{student.physical}}</span>
+
+                </div>
+                <div class="col-xs-1 ">
+                    <span>{{student.chemistry}}</span>
+                </div>
+                <div class="col-xs-2 ">
+                    <span>{{(student.math + student.physical + student.chemistry)/3 | roundNum}}</span>
+                </div>
+                <span class="close1" (click)="removeStudent(i)">X</span>
+
+            </div>
+        </li>
+    </ul>
+
+
+
+
+    <section class=" table-btn ">
+        <div class="dropdown pull-left">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sắp Xếp
+                    <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li (click)="sortMath()"><a style="cursor: pointer;">Điểm Toán</a>
+                </li>
+                <li (click)="sortPhysical()"><a style="cursor: pointer;">Điểm Lý</a>
+                </li>
+                <li (click)="sortChemistry() "><a style="cursor: pointer;">Điểm Hóa</a>
+                </li>
+                <li (click)="sortTb() "><a style="cursor: pointer;">Điểm Trung Bình</a></li>
+            </ul>
+        </div>
+        <button class="btn btn-primary pull-right" (click)="findHSG() ">{{!fHSG? 'Tìm HSG' : 'Quay lại'}}</button>
+    </section>
+    <!-- <div class="dropdown ">
+        <button class="btn btn-primary dropdown-toggle " type="button " data-toggle="dropdown ">Dropdown Example
+            <span class="caret "></span></button>
+        <ul class="dropdown-menu ">
+            <li><a href="# ">HTML</a></li>
+            <li><a href="# ">CSS</a></li>
+            <li><a href="# ">JavaScript</a></li>
+        </ul>
+    </div> -->
+</div>

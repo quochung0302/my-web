@@ -1,0 +1,58 @@
+@font-face {
+    font-family: font1;
+    src: url(../../../../assets/fonts/texgyreadventor-regular.otf)
+}
+
+@font-face {
+    font-family: font1-bold;
+    src: url(../../../../assets/fonts/texgyreadventor-bold.otf)
+}
+
+* {
+    font-family: font1;
+}
+
+.table {
+    min-height: 500PX;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px 20px 60px 20px;
+    position: relative;
+    h1 {
+        text-align: center;
+        color: #1a90a9;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+}
+
+li.header {
+    background: rgb(109, 186, 211);
+}
+
+li.item {
+    position: relative;
+    .close1 {
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+        display: none;
+        padding: 5px;
+        color: red;
+        cursor: pointer;
+    }
+}
+
+li.item:hover {
+    background-color: rgb(196, 231, 245);
+    span.close1 {
+        display: block;
+    }
+}
+
+li.active:hover {
+    background-color: #337ab7;
+}
+
+.table {
+    background-color: rgba(255, 255, 255, 1);
+}

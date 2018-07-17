@@ -1,0 +1,33 @@
+<div class="weather-container">
+    <div class="input">
+        <h1>WEATHER APP</h1>
+        <form (ngSubmit)="onAddCity()">
+            <input type="text" placeholder="Please enter your city name!" [(ngModel)]="cityName" name="cityName">
+            <button>FIND</button><br>
+        </form>
+        <p *ngIf="err">Can't find your City!</p>
+        <p *ngIf="err2">The city already exists!</p>
+
+        <div class="lds-ellipsis" *ngIf="isLoad">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div class="city-list">
+        <div class="city-box" *ngFor="let city of cities; let i = index">
+            <div class="weather-info">
+                <div class="remove" (click)="remove(i)">X</div>
+                <h1 class="city-name">{{city.name| uppercase}}</h1>
+                <p>{{city.desc | titlecase}}</p>
+                <h1 class="temp">{{city.temp}} °C</h1>
+                <h3>Min-Temp: {{city.minTemp}} °C</h3>
+                <h3>Max-Temp: {{city.minTemp}} °C</h3>
+                <h3>Humidity: {{city.humidity}}%</h3>
+                <h3>Wind Speed: {{city.wind}} km/h</h3>
+            </div>
+        </div>
+
+    </div>
+</div>

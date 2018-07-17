@@ -1,0 +1,48 @@
+@font-face {
+    font-family: font1;
+    src: url(../../../../assets/fonts/texgyreadventor-regular.otf)
+}
+
+@font-face {
+    font-family: font1-bold;
+    src: url(../../../../assets/fonts/texgyreadventor-bold.otf)
+}
+
+* {
+    font-family: font1;
+}
+
+$color2: #1a90a9;
+$color1: #25b8bc;
+$color3: #0d182d;
+.container {
+    width: 100%;
+}
+
+.help-block {
+    color: rgb(223, 97, 97);
+}
+
+label {
+    text-align: left !important;
+    color: $color2;
+}
+
+.form {
+    padding: 54px 20px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.form-control {
+    width: 100%;
+    border-radius: 0;
+    border: 1px solid lightgray;
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid rgb(223, 97, 97);
+}
+
+.form {
+    background-color: rgba(255, 255, 255, 1);
+}

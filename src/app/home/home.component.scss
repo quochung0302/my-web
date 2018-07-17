@@ -1,0 +1,146 @@
+@font-face {
+    font-family: font1;
+    src: url(../../assets/fonts/texgyreadventor-regular.otf)
+}
+
+@font-face {
+    font-family: font1-bold;
+    src: url(../../assets/fonts/texgyreadventor-bold.otf)
+}
+
+$color2: #1a90a9;
+$color1: #25b8bc;
+$color3: #0d182d;
+* {
+    font-family: font1;
+}
+
+.home {
+    max-width: 800px;
+    margin: auto;
+    color: $color1;
+    text-align: center;
+    padding: 20px;
+    h1 {
+        opacity: 0;
+        font-size: 110px;
+        letter-spacing: 15px;
+        padding-top: 10px;
+        line-height: 60px;
+        animation: slide-welcome 1s ease 0.5s forwards;
+        color: $color1;
+    }
+    p {
+        font-size: 25px;
+        margin-top: 20px;
+        animation: slide-hi 0.5s ease forwards;
+        color: $color1;
+        span {
+            color: white;
+        }
+    }
+    h3 {
+        opacity: 0;
+        float: right;
+        margin-right: 70px;
+        margin-top: 10px;
+        animation: slide-welcome 1s ease 0.5s forwards;
+        color: $color1;
+    }
+}
+
+.hr1,
+.hr2,
+.hr3,
+.hr4 {
+    width: 100%;
+    margin: auto;
+    background: $color1;
+}
+
+.hr2 {
+    margin-top: 5px;
+    height: 2px;
+}
+
+.hr1 {
+    margin-top: 100px;
+    height: 1px;
+}
+
+.hr3 {
+    height: 2px;
+}
+
+.hr4 {
+    height: 1px;
+    margin-top: 5px;
+}
+
+.text {
+    overflow: hidden;
+}
+
+.btn-about {
+    opacity: 0;
+    margin-top: 50px;
+    width: 150px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    animation: slide 1s ease 2s;
+    animation-fill-mode: forwards;
+    a {
+        color: white;
+        font-size: 20px;
+    }
+    &:hover {
+        border: 2px solid $color1;
+        a {
+            color: $color1;
+            text-decoration: none;
+        }
+    }
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(200%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@-webkit-keyframes slide-hi {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-70%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0%);
+    }
+}
+
+@-webkit-keyframes slide-welcome {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(70%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0%);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .text {
+        h1 {
+            font-size: 12vw;
+        }
+    }
+}
